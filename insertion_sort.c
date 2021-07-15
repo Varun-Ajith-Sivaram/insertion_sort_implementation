@@ -2,7 +2,7 @@
 
 #define size 10  //size of array is initialized to 10
 
-int Insertion_sort(int[]);
+void Insertion_sort(int[]);
 
 void main()
 {
@@ -37,7 +37,7 @@ void main()
 }
 
 
-int Insertion_sort(int a[])
+void Insertion_sort(int a[])
 {
     int i,j,key;
     
@@ -54,4 +54,5 @@ int Insertion_sort(int a[])
         
         a[j+1]=key;
     }
+    
 }
