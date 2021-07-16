@@ -1,14 +1,17 @@
 #include<stdio.h>
 
-#define size 10  //size of array is initialized to 10
-
-void Insertion_sort(int[]);
+void Insertion_sort(int[],int);
 
 void main()
 {
-    int a[size];
+    int size;
     
     printf("\tInsertion Sort Implementation\n");
+    
+    printf("Enter the number of terms: ");
+    scanf("%d",&size);
+    
+    int a[size];
     
     printf("\nEnter the elements: \n");
     
@@ -25,7 +28,7 @@ void main()
     }
     printf("\n");
     
-    Insertion_sort(a);
+    Insertion_sort(a,size);
     
     printf("\nElements after sorting: ");
     
@@ -37,11 +40,11 @@ void main()
 }
 
 
-void Insertion_sort(int a[])
+void Insertion_sort(int a[],int n)
 {
     int i,j,key;
     
-    for(i=0;i<size;i++)
+    for(i=0;i<n;i++)
     {
         key=a[i];
         j=i-1;
